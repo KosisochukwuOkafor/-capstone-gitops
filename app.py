@@ -1,4 +1,3 @@
-Set-Content app.py @'
 from flask import Flask, request, jsonify
 import logging
 
@@ -79,8 +78,5 @@ def method_not_allowed(e):
 
 if __name__ == '__main__':
     app.run(debug=False)
-'@
 
-
-if __name__ == '__main__':
-    app.run(debug=False)
+app.py
