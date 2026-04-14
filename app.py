@@ -1,3 +1,4 @@
+Set-Content app.py @'
 from flask import Flask, request, jsonify
 import logging
 
@@ -74,6 +75,11 @@ def not_found(e):
 @app.errorhandler(405)
 def method_not_allowed(e):
     return jsonify({'error': 'Method not allowed'}), 405
+
+
+if __name__ == '__main__':
+    app.run(debug=False)
+'@
 
 
 if __name__ == '__main__':
