@@ -9,6 +9,7 @@ logger = logging.getLogger(__name__)
 
 @app.route("/health", methods=["GET"])
 def health():
+    x=1  # flake8 will flag this
     logger.info("Health check called")
     return jsonify({"status": "UP", "version": "1.0.0"}), 200
 
